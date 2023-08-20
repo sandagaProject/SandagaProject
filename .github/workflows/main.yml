@@ -16,12 +16,6 @@ jobs:
         with:
           node-version: '10.17.0'
 
-      - name: Install dependencies
-        run: cd source && npm install
-
-      - name: Build
-        run: cd source && npx gulp build
-
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@2.0.0   
         env:                                        
