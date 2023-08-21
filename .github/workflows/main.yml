@@ -19,11 +19,8 @@ jobs:
         run: cd sandaga-app && npm ci
 
       - name: Build
-        run: cd sandaga-app && npm run build
+        run: cd sandaga-app && npm run build && npm run export
 
-      - name: Build
-        run: cd sandaga-app && npm run export
-      
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@2.0.0   
         env:                                        
